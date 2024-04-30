@@ -14,54 +14,33 @@
 .yim2{width:165px;height:100%;line-height:20px;font-size:14px;color:#909;text-align:center;background-color:#c4c4c4;float:left;border-radius:10px;}
 .bar916{width:100%;height:36px;line-height:18px;font-size:12px;color:#777;text-align:center}
 </style>
-
 <script language="javascript">
-  var timeID=0;
-var tt1=600;
-tt2=0;
-tt3=0;
-var timeID=setInterval("hnceTimer()",1000);
-function hnceTimer(){
-  tt1--;
-  if (tt1>=0){
-if ((tt1 % 2)==1){
-  document.getElementById('bian92a').style.backgroundColor="#bfffc8";
-  document.getElementById('bian92b1').style.backgroundColor="#bfffc8";
-  document.getElementById('bian92b2').style.backgroundColor="#bfffc8";
-  document.getElementById('bian92c').style.backgroundColor="#bfffc8";
-}else{
-  document.getElementById('bian92a').style.backgroundColor="#090";
-  document.getElementById('bian92b1').style.backgroundColor="#090";
-  document.getElementById('bian92b2').style.backgroundColor="#090";
-  document.getElementById('bian92c').style.backgroundColor="#090";
-}
-  tt2=tt1 % 60;
-  tt3=(tt1-tt2)/60;
+  // 定义颜色数组
+  const colors = ['#bfffc8', '#090'];
+  let index = 0;
  
-  }
-}
+  // 设置定时器每秒变化一次颜色
+  setInterval(function() {
+  document.getElementById('bian92a').style.backgroundColor=colors[index];
+  document.getElementById('bian92b1').style.backgroundColor=colors[index];
+  document.getElementById('bian92b2').style.backgroundColor=colors[index];
+  document.getElementById('bian92c').style.backgroundColor=colors[index];
+    index = (index + 1) % colors.length; // 循环颜色数组
+  }, 1000);
 </script>
 
-
-
-
 </head>
-
-
-
-
-
 <body>
 
 <form method="POST" name="myform52" action="">
 <div id="bak_0">  
- <div id="mydiv" style="width:100%;height:88px;"></div>
+  <div id="mydiv" style="width:100%;height:88px;"></div>
   <div style="width:100%;height:7px;BACKGROUND-IMAGE: url(split5.png)"></div>
   <div style="width:100%; min-height:90px;">
   <div style="width:100%;height:6px;text-align:left;">
   </div>
   <div style="width:100%;min-height:26px;line-height:26px;font-size:16px;color:#00c;font-weight:500;font-family:黑体;BACKGROUND-IMAGE:url(/imagesss/sf_4.png)">
-  <span style="color:#00a">计算机学院.王小帅</span>　
+  <span style="color:#00a">计算机学院.刘大妞</span>　
   <a href="#">
   <span style="font-size:12px;;color:#00c;">〖切换账号〗</span></a><br />主校区大门东门.
   <span style="background-color:#070;color:#ff0">入口</span><br />身份：单独授权
@@ -79,6 +58,8 @@ if ((tt1 % 2)==1){
 		var hours = currentDate.getHours().toString().padStart(2, '0');
 		var minutes = currentDate.getMinutes().toString().padStart(2, '0');
         document.getElementById("q1").innerHTML = "("+month+"月"+day+"日"+hours+":"+minutes+"获取"+")";
+		
+		
 		//自动获取当前日期的图片
 		document.getElementById('mydiv').style.background = 'url(https://gitee.com/yizhihongli/myimg/raw/master'+'/title'+month+day+'.png)';
 
@@ -88,7 +69,7 @@ if ((tt1 % 2)==1){
 <div style="width:100%;height:280px;">
 <div style="width:15px;height:100%;background-color:#090;float:left" id="bian92b1"></div>
 <div style="width:320px;height:100%;float:left;text-align:center;">
-<img src="face2.jpg" style="height:280px;border:0px;" id="img916" />
+<img src="face1.jpg" style="height:280px;border:0px;" id="img916" />
 </div>
 <div style="width:14px;height:100%;background-color:#090;float:right" id="bian92b2"></div>
 </div>
