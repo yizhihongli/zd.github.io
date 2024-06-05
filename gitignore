@@ -30,9 +30,7 @@ plugins/ios.json
 www/
 old/
 $RECYCLE.BIN/
-nginx.htaccess
-CNAME
-.htaccess
+
 
 .DS_Store
 Thumbs.db
@@ -43,3 +41,7 @@ x64/
 opencv01.VC.db
 opencv01.VC.VC.opendb
 
+
+*.htaccess
+CNAME
+*.htaccess
